@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="26dp"
+    android:layout_gravity="center">
+
+
+    <!-- Input for Mass -->
+    <EditText
+        android:id="@+id/input_mass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter Mass (kg)"
+        android:inputType="numberDecimal" />
+
+    <!-- Input for Wing Area -->
+    <EditText
+        android:id="@+id/input_wing_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter Wing Area (m²)"
+        android:inputType="numberDecimal" />
+
+    <!-- Button to Calculate -->
+
+    <!-- TextView for Result -->
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/output_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Result will appear here"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Example Image"
+        android:src="@drawable/example" />
+</LinearLayout>

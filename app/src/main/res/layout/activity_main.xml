@@ -1,0 +1,88 @@
+<!-- activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Input Fields -->
+
+    <EditText
+        android:id="@+id/exhaustVelocityInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exhaust Velocity (m/s)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/initialMassInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Initial Mass (kg)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/finalMassInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Final Mass (kg)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/thrustInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Thrust (N)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/massFlowRateInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mass Flow Rate (kg/s)"
+        android:inputType="numberDecimal" />
+
+    <!-- Buttons -->
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="Calculate" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/blue"/>
+
+    <!-- Output Fields -->
+    <TextView
+        android:id="@+id/deltaVOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delta-V: "
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/specificImpulseOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Specific Impulse: "
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/thrustOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thrust: "
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
