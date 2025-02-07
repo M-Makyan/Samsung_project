@@ -3,55 +3,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="26dp"
-    android:layout_gravity="center">
+    android:padding="26dp">
 
-
-    <!-- Input for Mass -->
-    <EditText
-        android:id="@+id/input_mass"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:hint="Enter Mass (kg)"
-        android:inputType="numberDecimal" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <!-- Input for Wing Area -->
-    <EditText
-        android:id="@+id/input_wing_area"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:hint="Enter Wing Area (m²)"
-        android:inputType="numberDecimal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <!-- Button to Calculate -->
+            <EditText
+                android:id="@+id/input_mass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter Mass (kg)"
+                android:inputType="numberDecimal" />
 
-    <!-- TextView for Result -->
+            <EditText
+                android:id="@+id/input_wing_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter Wing Area (m²)"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/btn_calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/blue"
+                android:text="Calculate" />
+
+            <TextView
+                android:id="@+id/output_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Result will appear here"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Example Image"
+                android:src="@drawable/example" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-        android:id="@+id/btn_calculate"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/blue"
-        android:text="Calculate" />
-
-    <TextView
-        android:id="@+id/output_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Result will appear here"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="Example Image"
-        android:src="@drawable/example" />
+        android:text="Back" />
 </LinearLayout>

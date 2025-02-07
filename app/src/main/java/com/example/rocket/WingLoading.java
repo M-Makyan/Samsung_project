@@ -15,37 +15,39 @@ public class WingLoading extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wing_loading);
 
-        // Link UI elements
         EditText inputMass = findViewById(R.id.input_mass);
         EditText inputWingArea = findViewById(R.id.input_wing_area);
         Button btnCalculate = findViewById(R.id.btn_calculate);
         TextView outputResult = findViewById(R.id.output_result);
 
-        // Set up button click listener
+        Button backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ImageView imageView = findViewById(R.id.imageView);
                 try {
-                    // Get inputs
                     double massKg = Double.parseDouble(inputMass.getText().toString());
                     double wingAreaM2 = Double.parseDouble(inputWingArea.getText().toString());
 
-                    // Validate inputs
                     if (massKg <= 0 || wingAreaM2 <= 0) {
                         outputResult.setText("Mass and Wing Area must be greater than zero.");
                         return;
                     }
 
-                    // Convert inputs to imperial units
-                    double weightOunce = massKg * 35.274; // Convert mass to pounds
-                    double wingAreaSqIn = wingAreaM2 * 1550; // Convert wing area to square inches
-                    double wingAreaSqFt = wingAreaSqIn / 144; // Convert wing area to square feet
+                    double weightOunce = massKg * 35.274;
+                    double wingAreaSqIn = wingAreaM2 * 1550;
+                    double wingAreaSqFt = wingAreaSqIn / 144;
 
-                    // Calculate Wing Cubic Loading
                     double wingCubicLoading = weightOunce / Math.pow(wingAreaSqFt, 1.5);
 
-                    // Display result
                     outputResult.setText("Wing Cubic Loading: " + String.format("%.2f", wingCubicLoading));
                 } catch (NumberFormatException e) {
                     outputResult.setText("Please enter valid numbers.");

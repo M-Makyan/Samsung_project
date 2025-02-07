@@ -19,7 +19,6 @@ public class FirstActivity extends AppCompatActivity {
         btnGoToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start MainActivity when button is clicked
                 Intent intent = new Intent(FirstActivity.this, MainActivity.class);
                 startActivity(intent);
             }

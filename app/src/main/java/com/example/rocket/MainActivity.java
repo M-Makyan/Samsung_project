@@ -1,6 +1,5 @@
 package com.example.rocket;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize UI elements
         exhaustVelocityInput = findViewById(R.id.exhaustVelocityInput);
         initialMassInput = findViewById(R.id.initialMassInput);
         finalMassInput = findViewById(R.id.finalMassInput);
@@ -31,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button calculateButton = findViewById(R.id.calculateButton);
         Button clearButton = findViewById(R.id.clearButton);
+        Button backButton = findViewById(R.id.backButton);
 
-        // Set button listeners
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 clearInputs();
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
